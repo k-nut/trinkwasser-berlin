@@ -15,6 +15,15 @@ plzs = [10115, 10117, 10119, 10178, 10179, 10243, 10245, 10247, 10249, 10315, 10
        13507, 13509, 13581, 13583, 13585, 13587, 13589, 13591, 13593, 13595, 13597, 13599, 13627, 13629, 14050, 14052,\
        14053, 14055, 14057, 14059, 14089, 14109, 14129, 14163, 14165, 14167, 14169, 14193, 14195, 14197, 14199]
 
+molar_mass = {"natrium": 22.9898, "kalium" : 39.0983, "calcium" : 100.0869, "magnesium": 24.3050\
+               "chlorid" : 35.453, "nitrat" : 62.0049, "sulfat" : 96.06}
+
+def convert_mmol_l_to_mg_l(value, element):
+    if element in molar_mass.keys():
+        return value * molar_mass[element]
+    else:
+        return 0
+
 def find_zones():
     zones = []
     unique_plz = []
